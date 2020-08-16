@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Rave.dj Downloader
+        </title>
+        
+        <style>
+            /* Tag Styles */
+            body {
+                background-color: #3d3e43;
+                background-image: url("https://gifypet.neocities.org/images/pipes.png");
+                font-family: Arial;
+                text-align: center;
+                color: white;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            
+            header h2 {
+            	position: relative;
+            	top: -25px;
+            }
+            
+            header ul {
+            	list-style-type: none;
+            	padding: none;
+            }
+            
+            header li {
+            	display: inline;
+            	padding-left: 20px;
+            	padding-right: 20px;
+            }
+            
+            iframe {
+            	border-radius: 10px;
+            }
+            
+            form {
+            	float: right;
+            	width: 400px;
+            	padding: 20px;
+            	text-align: left;
+            	font-size: 13px;
+            }
+            
+            form h2 {
+            	text-align: center;
+            }
+            
+            footer {
+            	float: left;
+            	width: 100%;
+            	font-size: 12px;
+            	font-weight: bold;
+            	padding: 10px 0 20px 0;
+            }
+            
+            form, #navy div, #main-table div {
+            	background-color: white;
+            	border-radius: 10px;
+            	border: 3px dashed black;
+            	color: black;
+            }
+            
+            /* ID Styles */
+            #super-wrapper {
+            	float: left;
+            	position: absolute;
+            	top: 30px;
+            	width: 100%;
+            }
+            
+            #wrapper {
+            	width: 670px;
+            	margin-left: auto;
+            	margin-right: auto;
+            }
+            
+            #logo img {
+            	position: relative;
+            }
+            
+            #main-table {
+            	width: 100%;
+            }
+            
+            #main-table tr, #main-table td {
+            	width: 50%;
+            	padding-bottom: 15px;
+            }
+            
+            #main-table div {
+            	text-align: left;
+            	padding: 20px;
+            	color: black;
+            	font-family: times;
+            	height: 275px;
+            }
+            
+            #main-table ul {
+            	padding-left: 20px;
+            	text-align: left;
+            	color: white;
+            	font-size: 16px;
+            	font-weight: bold;
+            }
+            
+            #main-table li {
+            	margin-bottom: 5px;
+            }
+            
+            #main-table iframe + a {
+            	color: aqua;
+            	font-size: 13px;
+            }
+            
+            #navy {
+            	float: left;
+            	width: 180px;
+            	font-size: 13px;
+            }
+            
+            #navy div {
+            	padding: 0px 10px 10px 10px;
+            	width: 100%;
+            	text-align: left;
+            }
+            
+            #navy a {
+            	width: 100%;
+            }
+            
+            #navy ol {
+            	padding-left: 15px;
+            }
+            
+            #navy li {
+            	padding-bottom: 5px;
+            }
+            
+            #music {
+            	display: none;
+            }
+            
+            /* Class Styles */
+            .b-box {
+            	margin-bottom: 15px;
+            }
+            
+            .b-box textarea {
+            	display: block;
+            	width: 100%;
+            	height: 80px;
+            	resize: none;
+            }
+            
+            .alert {
+            	color: green;
+            	text-decoration: underline;
+            }
+            
+            .center {
+            	text-align: center;
+            }
+            
+            .rounded {
+            	border-radius: 10px;
+            }
+            
+            .frogbar {
+            	margin-top: 20px ;
+            	margin-bottom: 20px ;
+            }
+            
+            /* Sample Pet Style */
+            #b-sample {
+            	width: 100%;
+            	padding: 20px 0 20px 0;
+            	height: 240px;
+            	background-color: white;
+            	background-image: url("https://gifypet.neocities.org/pet/backgrounds/gify.jpg");
+            	color: mediumslateblue;
+            }
+            
+            #b-sample table, #b-sample th, #b-sample td {
+               border: 1px dashed mediumslateblue;
+            }
+            
+            #b-sample table {
+            	margin-left: auto;
+            	margin-right: auto;
+            }
+            
+            #b-sample-map {
+            	width: 200px;
+            	height: 200px;
+            	background-size: 100%;
+            	background-image: url("https://gifypet.neocities.org/pet/maps/hills.jpg");
+            }
+            
+            #b-sample-pet {
+            	position: relative;
+            	width: 80px;
+            	height: 100px;
+            	background-size: 100%;
+            	background-repeat: no-repeat;
+            	background-position: bottom;
+            	background-image: url("https://gifypet.neocities.org/pet/pets/cactus.gif");
+            	top: 50px;
+            	left: 50px;
+            }
+            
+            /* Junk Items */            
+            #angel {
+            	position: absolute;
+            	float: right;
+            	top: 100px;
+            	right: 200px;
+            }
+            
+            #angel2 {
+            	position: absolute;
+            	float: left;
+            	top: 1500px;
+            	left: 120px;
+            }
+            
+            #pop {
+            	position: absolute;
+            	float: right;
+            	top: 2000px;
+            	right: 70px;
+            	width: 250px;
+            }
+       		
+       		#kitty {
+       			position: absolute;
+       			float: left;
+       			top: 500px;
+       			left: 100px;
+       			width: 230px;
+       		}
+       		
+       		#butterfly, #angel, #angel2, #pop, #kitty {
+       			opacity: 0.9;
+       		}
+            
+            /* Mobile formating */
+            @media (max-width: 1200px) {
+                
+                #butterfly, #angel, #angel2, #pop, #kitty {
+                    display: none;
+                }
+                
+            }
+            
+            /* Animations */
+            .clouds {
+				opacity: 0.7;
+				width: 100%;
+				height: 362px;
+				position: relative;
+				overflow: hidden;
+				margin-top: 70px;
+				margin-bottom: 400px;
+            }
+            
+            .clouds > div {
+				width: 2526px;
+				background: url(https://gifypet.neocities.org/images/cloud.png);
+				height: 100%;
+				transform: translate3d(0, 0, 0);
+            }
+            .clouds .mover-1 {
+				animation: moveSlideshow 15s linear infinite;
+            }
+            
+            @keyframes moveSlideshow {
+				100% { 
+					transform: translateX(-20%);  
+				}
+            }
+            
+            @keyframes jump {
+              from, 20%, 53%, 80%, to {
+                animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+                transform: translate3d(0,0,0);
+              }
+            
+              40%, 43% {
+                animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+                transform: translate3d(0, -15px, 0);
+              }
+            
+              70% {
+                animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+                transform: translate3d(0, -5px, 0);
+              }
+            
+              90% {
+                transform: translate3d(0,-4px,0);
+              }
+            }
+            
+            .jump {
+              animation:jump 1s infinite;
+              transform-origin: center bottom;
+            }
+            
+            
+            @keyframes flip {
+              from {
+                transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+                animation-timing-function: ease-out;
+              }
+            
+              40% {
+                transform: perspective(700px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+                animation-timing-function: ease-out;
+              }
+            
+              50% {
+                transform: perspective(700px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+                animation-timing-function: ease-in;
+              }
+            
+              80% {
+                transform: perspective(400px) scale3d(.95, .95, .95);
+                animation-timing-function: ease-in;
+              }
+            
+              to {
+                transform: perspective(400px);
+                animation-timing-function: ease-in;
+              }
+            }
+            
+            .flip:hover {
+              backface-visibility: visible;
+              animation:flip 1.3s;
+            }
+            
+        </style>
+    </head>
+    <body>
+    	<div class="clouds">
+    		<div class="mover-1"></div>
+    	</div>
+    	<div class="clouds">
+    		<div class="mover-1"></div>
+    	</div>
+    	<div class="clouds">
+    		<div class="mover-1"></div>
+    	</div>
+      <title>Rave.dj Downloader</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+
+<body>
+
+<h1>Rave.dj Downloader</h1>
+
+If the video does not download then this might be broken/you need to wait for the video to finish!
+
+<br>
+
+<input type="text" id="url" value="Enter the URL">
+
+<button onclick="download()">Download</button>  
+
+<script>
+
+var downloader = function(downloadURL) {
+
+
+
+   location = downloadURL;
+
+
+
+};
+
+
+
+function download() {
+
+    var theURL = document.getElementById("url").value;
+
+    var myURL = theURL.split("/");
+
+    console.log(myURL)
+
+    var realURL = "https://api.red.wemesh.ca/mashups/" + myURL[3];
+
+
+
+    $.getJSON(realURL, function( json ) {
+
+      if(json.data.videos.max == null) {
+
+       alert("Wait for the video to finish!").then(location.reload())
+
+      } else {
+
+       downloader(json.data.videos.max);
+
+       console.log( "MP4 URL: " + json.data.videos.max);
+
+      }
+
+    });
+
+
+
+}
+
+</script>
+
+<footer>
+&copy; Asenturisk Corporation
+<br />
+All videos are properties of <a href="https://rave.dj">Rave.dj</a> and their respective owners.
+</footer>
+</body>
+</html>
