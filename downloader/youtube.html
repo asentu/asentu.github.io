@@ -52,9 +52,9 @@
     <div style="width:100%;">
   <!-- ROW 1 -->
     <div class="linkrow"> 
-        <div onclick="location.href='downloader/ravedj.html';" class="layerlink"><p>  Rave.dj </p></div>
-        <div onclick="location.href='downloader/soundcloud.html';" class="layerlink"><p>  Soundcloud  </p></div>
-        <div onclick="location.href='downloader/youtube.html';" class="layerlink0"><p>  Youtube  </p></div>
+        <div onclick="location.href='ravedj.html';" class="layerlink"><p><br/>  Rave.dj <br/></p></div>
+        <div onclick="location.href='soundcloud.html';" class="layerlink"><p><br/>  Soundcloud  <br/></p></div>
+        <div onclick="location.href='youtube.html';" class="layerlink0"><p><br/>  Youtube  <br/></p></div>
         <div onclick="location.href='downloader/facebook.html';" class="layerlink"><p>  Facebook  </p></div>
         <div onclick="location.href='downloader/instagram.html';" class="layerlink"><p>  Instagram  </p></div>
         <div onclick="location.href='downloader/deviantart.html';" class="layerlink"><p>  Deviantart  </p></div>
@@ -91,10 +91,14 @@
 <br />
 <br />
 
-<div class="search-block">
+        
+
+
+<section id="main" class="jumbotron mb-0 pb-3 bg-primary position-relative">
+    <div class="search-block">
         <div class="container-fluid text-white h-100">
             <div class="align-items-center text-center pl-lg-5">
-                <h1 class="mb-3 mt-3 main_title">Download YouTube Videos</h1>
+                <h1 class="mb-3 mt-3 main_title">Download YouTube Videos + Convert To MP3</h1>
                 <div class="row justify-content-center" id="m-form">
                     <div class="col-12 col-md-10 col-lg-6">
                         <search-form
@@ -102,7 +106,7 @@
                             start-button="Start">
                             <input type="hidden" name="csrfmiddlewaretoken" value="6SGQSbdzTpHXLue7umYSuKVLtjbv8jvXnvOAkkBDJoooEl4kg3J666bonbHZOlTt">
                         </search-form>
-                        <img src="https://y2mate.guru/en7/static/assets/img/30.c1cd07e695ab.svg" id="img" style="display:none"/>
+                        <img src="/static/assets/img/30.c1cd07e695ab.svg" id="img" style="display:none"/>
                     </div>
                 </div>
             </div>
@@ -113,9 +117,23 @@
         </main-results>
         <rating></rating>
         <search-results
-            canonical="/en7/"
-        >
-        </search-results>	
+            canonical="/en7/">
+        </search-results>
+        <ads-keeper
+            adkey="M598552ScriptRootC933717"
+            adjs="y2mate.guru.933717.js"
+            :show="true">
+        </ads-keeper>
+    </div>
+
+
+
+
+
+
+
+
+	
 
 </div> <!-- End of Mebious Entry -->
 </div>  <!-- End of main -->
