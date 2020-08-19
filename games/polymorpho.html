@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Poly Morpho</title>
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="description" content="Unique 4-dimensional object party simulator. A virtual environment to help you chill." />
+        <meta name="author" content="muktodmi" />
+        <meta itemprop="name" content="Mass Migrations">
+        <meta itemprop="description" content="Unique 4-dimensional object party simulator. A virtual environment to help you chill.">
+        <meta itemprop="image" content="http://massmigrations.com/og_image9.jpg">
+        <meta name="twitter:card" content="photo" />
+        <meta name="twitter:site" content="@DewanMaksudul" />
+        <meta name="twitter:title" content="Poly Morpho" />
+        <meta name="twitter:image" content="http://massmigrations.com/og_image9.jpg" />
+        <meta name="twitter:url" content="https://asentu.github.io/games/polymorpho" />
+        <meta property="og:title" content="Poly Morpho" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://asentu.github.io/games/polymorpho" />
+        <meta property="og:image" content="http://massmigrations.com/og_image9.jpg">
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="628" />
+        <meta property="og:description" content="Unique 4-dimensional object party simulator. A virtual environment to help you chill." />
+        <meta property="fb:app_id" content="1752580591691525" /> 
+
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <meta charset="utf-8">
+
+        <!-- Origin Trial Token, feature = WebVR (For Chrome M59+), origin = https://massmigrations.com, expires = 2017-10-10 -->
+        <meta http-equiv="origin-trial" data-feature="WebVR (For Chrome M59+)" data-expires="2017-10-10" content="Apr9pw4pPijUF8iIX+RyrC/uWEvhCx3rEOqgR9QC2eIsMZ8s8tjHmPAeaFEnXUh15P1JSwlSohHC/5saai5IHwgAAABUeyJvcmlnaW4iOiJodHRwczovL21hc3NtaWdyYXRpb25zLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVlIxLjEiLCJleHBpcnkiOjE1MDc1OTY3NDJ9">
+
+        <link rel="shortcut icon" href="https://massmigrations.com/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="https://massmigrations.com/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="https://massmigrations.com/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="https://massmigrations.com/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="https://massmigrations.com/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="https://massmigrations.com/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="https://massmigrations.com/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="https://massmigrations.com/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="https://massmigrations.com/apple-touch-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="https://massmigrations.com/apple-touch-icon-180x180.png" />
+        <link rel="icon" type="image/png" href="https://massmigrations.com/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="https://massmigrations.com/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="https://massmigrations.com/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="https://massmigrations.com/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="https://massmigrations.com/favicon-192x192.png" sizes="192x192">
+
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+
+        <link href="https://massmigrations.com/css/style.css" rel="stylesheet" type="text/css">
+        <link href="https://massmigrations.com/css/font-awesome.css" rel="stylesheet" type="text/css">
+    </head>	
+
+    <body bgcolor="#000000">
+        
+        <script src="https://demo.marpi.pl/_/scripts/demo-ui.js"></script>
+        <script type="text/javascript">
+            MarpiDemoUI.init("mass_migrations");
+        </script>
+
+        <div id="preloader">
+            <div id="preloader_background">
+                <div id="progress"></div>
+            </div>
+        </div>
+        <div id="title" class="bold">
+            <!--Mass Migrations-->
+        </div>
+        <div id="about" class="bold">
+            <a id="aboutbutton">About</a>
+        </div>
+        <div id="header">
+            <img style="display:none;" id="watermark" src="https://massmigrations.com/textures/logo.svg">
+        </div>
+        <div id="nav" class="bold">
+            <a id="create" class="button outline"><i class="fa fa-refresh" id="refresh" style="display: inline;">&nbsp;</i>Generate<span class="lines"></span></a>
+            <a id="gallery" class="button outline">Gallery<span class="lines"></span></a>
+            <a id="setfree" class="button outline">Animate<span class="lines"></span></a>
+        </div>
+        <div id="leftnav" class="bold">
+            <a href="javascript:AudioHandler.finishSound()"><i class="fa fa-chevron-left fa-lg"></i> return</a>
+        </div>
+        <div id="bottomnav" class="bold">
+            <span style="display:none;" id="sharing">Share:</span>
+            <a style="display:none;" id="twitter" title="Share on Twitter"><i class="fa fa-twitter fa-lg"></i></a>
+            <a style="display:none;" id="instagram" title="Share on Instagram" download="mass_migrations_instagram.jpg"><i class="fa fa-instagram fa-lg"></i></a>
+            <a style="display:none;" id="facebook" title="Share on Facebook"><i class="fa fa-facebook fa-lg"></i></a>
+        </div>
+        <div id="bottommid" class="bold">
+            <a id="wallpaper" title="Generate Wallpaper" download="mass_migrations_wallpaper.jpg"><i class="fa fa-camera fa-2x"></i></a>
+            <a id="singledownload" title="Download Creature OBJ" download="mass_migrations.obj"><i class="fa fa-download fa-2x"></i></a>
+            <!--<a id="download" title="Download Creature OBj for 3D printing" download="mass_migrations.obj"><i class="fa fa-cloud-download fa-2x"></i></a>-->
+        </div>
+        <div id="footer" class="bold">
+            <a id="vr">ENTER WEBVR</a>
+            <a id="music" title="Toggle Sound"><i class="fa fa-volume-up fa-lg"></i></a>
+            <a id="fullscreen" title="Toggle Fullscreen"><i class="fa fa-arrows-alt fa-lg"></i></a>
+        </div>
+        <div id="overlay" class="overlay">
+            <div class="tab">
+                <div class="popup">
+                    <div class="content">
+                        <h1>This is Poly Morpho</h1>
+                        Unique 4-dimensional object party simulator. A virtual environment to help you chill.
+                        <br><br>
+                        <!--<b>Generate</b>: Create a new creature<br>
+                        <b>Gallery</b>: Adopt from an infinite, real-time gallery of creations<br>
+                        <b>Play</b>: Free your creation in a sound-reactive visualization<br>
+                        <br>-->
+                        Poly Morpho was created by <a href="http://instagram.com/dewan.m.i.mukto" target="_blank">MuktoDMI</a> with music by <a href="http://anonbast.com" target="_blank">An On Bast</a> and design by <a href="http://ahering.com" target="_blank">Angelique Hering</a>.
+                        <br><br>
+                        Big thanks to <a href="http://poolsofchrome.tumblr.com/" target="_blank">Cosimo Galluzzi</a> for inspiration, <a href="https://twitter.com/mrdoob" target="_blank">Ricardo Cabello</a> for ThreeJS, <a href="https://twitter.com/Tojiro" target="_blank">Brandon Jones</a> for WebVR, <a href="https://twitter.com/zadvorsky" target="_blank">Szenia Zadvornykh</a> and <a href="https://twitter.com/felixturner" target="_blank">Felix Turner</a> for some awesome shaders and <a href="https://twitter.com/marpi" target="_blank">Marpi Studio</a> for support. 
+                        <br>
+                        <br>
+                        <p align="center" style="cursor: pointer;"><i class="fa fa-times fa-2x"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="overlayVR" class="overlay">
+            <div class="tab">
+                <div class="popup">
+                    <h1>Poly Morpho in VR</h1>
+                    If you have an HTC Vive or Oculus Rift headset, you can see this website in Virtual Reality!
+                    <br><br>
+                    The only thing you need is a WebVR enabled browser, you can download it from here: <a href="http://webvr.info/" target="_blank">http://webvr.info/</a>.
+                    <br><br>
+                    After you install it, come back to this site and you will be put INSIDE this generative world. Make sure your headset firmware is up to date. If you have any trouble setting it up, feel free to reach out to me on <a href="https://instagram.com/dewan.m.i.mukto" target="_blank">Instagram</a>.
+                    <br>
+                    <br>
+                    <p align="center" style="cursor: pointer;"><i class="fa fa-times fa-2x"></i></p>
+                </div>
+            </div>
+        </div>
+        <script>
+            var preloaderProgressValue = 0.15;
+            var preloaderProgressAnimValue = 0;
+            function preloaderProgress(perc) {
+                preloaderProgressValue = perc;
+            }
+            function draw() {
+                preloaderProgressAnimValue -= (preloaderProgressAnimValue - preloaderProgressValue) / 5;
+                document.getElementById("progress").style.width = 100 * preloaderProgressAnimValue + "px";
+                document.getElementById("progress").style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+
+                if (preloaderProgressAnimValue < .98)
+                    requestAnimationFrame(draw);
+            }
+            draw();
+
+            var deeplinkName = "";        </script>
+                    <script src="https://massmigrations.com/mass.min.js?v="></script>
+        
+<!--<img src="https://massmigrations.com/textures/scheme.jpg" id="scheme" style="display:none;">-->
+
+        <script type="text/javascript">
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-873340-36', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+    </body>
+</html>
